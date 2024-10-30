@@ -17,16 +17,18 @@ const closeSidebar = () => {
   <div class="h-screen flex bg-bgDarker">
     <div class="flex flex-col items-start justify-between h-full p-8">
       <div class="flex flex-col items-start justify-start">
-        <h1 class="text-3xl tracking-wider uppercase whitespace-nowrap">
-          <span class="font-extrabold text-lightGray">F</span>
-          <span class="outlined-text" :class="[isSidebarOpen ? '' : 'hidden']"
-            >jolla</span
-          >
-          <span class="font-extrabold text-lightGray">S</span>
-          <span class="outlined-text" :class="[isSidebarOpen ? '' : 'hidden']"
-            >elimi</span
-          >
-        </h1>
+        <RouterLink to="/" @click="closeSidebar">
+          <h1 class="text-3xl tracking-wider uppercase whitespace-nowrap">
+            <span class="font-extrabold text-lightGray">F</span>
+            <span class="outlined-text" :class="[isSidebarOpen ? '' : 'hidden']"
+              >jolla</span
+            >
+            <span class="font-extrabold text-lightGray">S</span>
+            <span class="outlined-text" :class="[isSidebarOpen ? '' : 'hidden']"
+              >elimi</span
+            >
+          </h1>
+        </RouterLink>
         <span
           class="text-lg text-darkGray"
           :class="[isSidebarOpen ? 'flex' : 'hidden']"
