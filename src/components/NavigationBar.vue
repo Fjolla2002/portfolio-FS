@@ -54,6 +54,7 @@ const closeSidebar = () => {
             <li @click="closeSidebar">
               <RouterLink
                 to="/"
+                active-class="text-transparent bg-clip-text bg-toRightGradient after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-toRightGradient after:transition-all after:duration-300 hover:after:w-full"
                 class="cursor-none relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >
                 Home
@@ -63,6 +64,7 @@ const closeSidebar = () => {
             <li @click="closeSidebar">
               <RouterLink
                 to="/about"
+                active-class="text-transparent bg-clip-text bg-toRightGradient after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-toRightGradient after:transition-all after:duration-300 hover:after:w-full"
                 class="cursor-none relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >
                 About
@@ -71,6 +73,7 @@ const closeSidebar = () => {
             <li @click="closeSidebar">
               <RouterLink
                 to="/work"
+                active-class="text-transparent bg-clip-text bg-toRightGradient after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-toRightGradient after:transition-all after:duration-300 hover:after:w-full"
                 class="cursor-none relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >
                 Work
@@ -79,6 +82,7 @@ const closeSidebar = () => {
             <li @click="closeSidebar">
               <RouterLink
                 to="/Experience"
+                active-class="text-transparent bg-clip-text bg-toRightGradient after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-toRightGradient after:transition-all after:duration-300 hover:after:w-full"
                 class="cursor-none relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >
                 Experience
@@ -87,6 +91,7 @@ const closeSidebar = () => {
             <li @click="closeSidebar">
               <RouterLink
                 to="/education"
+                active-class="text-transparent bg-clip-text bg-toRightGradient after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-toRightGradient after:transition-all after:duration-300 hover:after:w-full"
                 class="cursor-none relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >
                 Education
@@ -95,6 +100,7 @@ const closeSidebar = () => {
             <li @click="closeSidebar">
               <RouterLink
                 to="/contact"
+                active-class="text-transparent bg-clip-text bg-toRightGradient after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-toRightGradient after:transition-all after:duration-300 hover:after:w-full"
                 class="cursor-none relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >
                 Contact
