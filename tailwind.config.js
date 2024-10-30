@@ -12,6 +12,7 @@ export default {
       },
       backgroundImage: {
         gradient: "linear-gradient(to bottom, #ffa500, #ff4500, #8b00ff)",
+        toRightGradient: "linear-gradient(to right, #ffa500, #ff4500, #8b00ff)",
       },
     },
   },

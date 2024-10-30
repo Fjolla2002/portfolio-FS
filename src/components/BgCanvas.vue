@@ -44,7 +44,7 @@ const createParticle = (
     },
 
     draw: (ctx: CanvasRenderingContext2D) => {
-      ctx.fillStyle = "#b0b0b0";
+      ctx.fillStyle = "#666666";
       ctx.beginPath();
       ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
       ctx.closePath();
