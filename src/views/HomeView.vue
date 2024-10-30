@@ -8,7 +8,7 @@ import { ChevronRightIcon } from "@heroicons/vue/24/solid";
   >
     <div class="flex flex-col items-start justify-start">
       <h2 class="text-8xl font-extrabold">Hello!</h2>
-      <div class="max-w-[350px] flex flex-col">
+      <div class="max-w-[350px] flex flex-col mt-5">
         <div class="flex">
           <span class="w-10 h-0.5 bg-baseWhite rounded-sm mt-2.5 mr-3"></span>
           <span class="text-base">
