@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ChevronRightIcon } from "@heroicons/vue/24/solid";
 </script>
+
 <template>
   <div
     class="p-5 h-screen w-full flex flex-col items-center justify-center text-baseWhite"
