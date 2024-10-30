@@ -39,13 +39,20 @@ const closeSidebar = () => {
       <div class="flex items-start justify-center w-full">
         <div
           v-if="!isSidebarOpen"
-          class="flex flex-col items-start justify-start gap-1 py-2"
+          class="group flex flex-col items-start justify-start gap-1 py-2"
           @click="openSidebar"
         >
-          <span class="w-3 h-0.5 bg-darkGray rounded-sm"></span>
-          <span class="w-5 h-0.5 bg-darkGray rounded-sm"></span>
-          <span class="w-4 h-0.5 bg-darkGray rounded-sm"></span>
+          <span
+            class="w-3 h-0.5 bg-darkGray rounded-sm group-hover:w-5 group-hover:bg-baseWhite transition-all duration-300 ease-in-out"
+          ></span>
+          <span
+            class="w-5 h-0.5 bg-darkGray rounded-sm group-hover:bg-baseWhite transition-all duration-300 ease-in-out"
+          ></span>
+          <span
+            class="w-4 h-0.5 bg-darkGray rounded-sm group-hover:w-5 group-hover:bg-baseWhite transition-all duration-300 ease-in-out"
+          ></span>
         </div>
+
         <div
           v-else
           class="min-w-[350px] flex items-center justify-between w-full"
