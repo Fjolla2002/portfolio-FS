@@ -2,7 +2,7 @@
   <div class="p-20 flex flex-col items-start justify-start">
     <h2 class="text-8xl text-baseWhite font-extrabold">About</h2>
     <p class="py-10 max-w-[800px] text-lightGray text-left">
-      As an enthusiastic Software Devloper, I have a strong foundation in both
+      As an enthusiastic Software Developer, I have a strong foundation in both
       back-end and front-end development. I focus on creating efficient and
       user-friendly applications, utilizing technologies such as HTML, CSS,
       SCSS, JavaScript, and TypeScript. With proficiency in frameworks like
