@@ -22,6 +22,6 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="cursor"
-    class="fixed w-12 h-12 rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 z-50 bg-[radial-gradient(circle,_white_0%,_#b0b0b0_50%,_#1a1a1a_100%)]"
+    class="fixed w-8 h-8 rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 z-50 bg-[radial-gradient(circle,_white_0%,_#b0b0b0_50%,_#1a1a1a_100%)]"
   ></div>
 </template>
