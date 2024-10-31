@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ChevronRightIcon } from "@heroicons/vue/24/solid";
+import CV from "../assets/pdfs/CV.pdf";
 </script>
 
 <template>
@@ -18,7 +19,7 @@ import { ChevronRightIcon } from "@heroicons/vue/24/solid";
         </div>
         <span class="w-full flex items-center justify-end mt-5 gap-1">
           <a
-            href="../assets/pdfs/CV.pdf"
+            :href="CV"
             download="FjollaSelimi_CV.pdf"
             class="text-lg font-bold cursor-none relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-toRightGradient after:transition-all after:duration-300 hover:after:w-full hover:text-transparent hover:bg-toRightGradient hover:bg-clip-text"
           >
