@@ -90,7 +90,7 @@ const closeSidebar = () => {
             </li>
             <li @click="closeSidebar">
               <RouterLink
-                to="/Experience"
+                to="/experience"
                 active-class="text-transparent bg-clip-text bg-toRightGradient after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-toRightGradient after:transition-all after:duration-300 hover:after:w-full"
                 class="cursor-none relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >

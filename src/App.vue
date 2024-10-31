@@ -6,10 +6,14 @@ import NavigationBar from "./components/NavigationBar.vue";
 </script>
 
 <template>
-  <CustomCursor />
-  <BgCanvas />
-  <div class="absolute top-0 left-0 w-full min-h-screen h-auto flex">
-    <NavigationBar />
-    <RouterView />
+  <div class="relative min-h-screen">
+    <BgCanvas class="absolute inset-0 z-0" />
+    <div class="flex w-full min-h-screen relative z-10">
+      <NavigationBar />
+      <div class="h-screen overflow-y-auto w-full">
+        <RouterView />
+      </div>
+    </div>
+    <CustomCursor class="absolute inset-0 z-20" />
   </div>
 </template>
