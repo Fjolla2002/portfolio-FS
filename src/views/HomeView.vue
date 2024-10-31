@@ -5,7 +5,7 @@ import CV from "../assets/pdfs/CV.pdf";
 
 <template>
   <div
-    class="p-5 h-screen w-full flex flex-col items-center justify-center text-baseWhite"
+    class="p-5 h-auto min-h-screen w-full flex flex-col items-center justify-center text-baseWhite"
   >
     <div class="flex flex-col items-start justify-start">
       <h2 class="text-8xl font-extrabold">Hello!</h2>
