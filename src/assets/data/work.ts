@@ -61,6 +61,39 @@ import td3 from "../projects/TravelDream/tours.png";
 import td4 from "../projects/TravelDream/profile.png";
 import td5 from "../projects/TravelDream/cart.png";
 
+import fe1 from "../projects/FashionableEcommerce/home.png";
+import fe2 from "../projects/FashionableEcommerce/clothes.png";
+import fe3 from "../projects/FashionableEcommerce/accessories.png";
+import fe4 from "../projects/FashionableEcommerce/contact.png";
+import fe5 from "../projects/FashionableEcommerce/login.png";
+import fe6 from "../projects/FashionableEcommerce/signup.png";
+import fe7 from "../projects/FashionableEcommerce/cart.png";
+import fe8 from "../projects/FashionableEcommerce/checkout-notLoggedIn.png";
+import fe9 from "../projects/FashionableEcommerce/checkout-loggedIn.png";
+
+import hms1 from "../projects/HMS/adminDashboard.jpg";
+import hms2 from "../projects/HMS/login.jpg";
+import hms3 from "../projects/HMS/receptionistsAdminView.jpg";
+import hms4 from "../projects/HMS/doctorsAdminView.jpg";
+import hms5 from "../projects/HMS/receptionisDashboard.jpg";
+import hms6 from "../projects/HMS/receptionisDashboard.jpg";
+import hms7 from "../projects/HMS/patientsReceptionistsView.jpg";
+import hms8 from "../projects/HMS/doctorsReceptionistsView.jpg";
+import hms9 from "../projects/HMS/appointmentsReceptionistsView.jpg";
+import hms10 from "../projects/HMS/appointmentsReceptionistsViewCheck.jpg";
+import hms11 from "../projects/HMS/doctorsDashboard.jpg";
+import hms12 from "../projects/HMS/appointmentsDoctorsView.jpg";
+import hms13 from "../projects/HMS/prescriptionDoctorsView.jpg";
+import hms14 from "../projects/HMS/serverStart.jpg";
+import hms15 from "../projects/HMS/clientStart.jpg";
+import hms16 from "../projects/HMS/serverChat.jpg";
+import hms17 from "../projects/HMS/clientChat.jpg";
+
+import p1 from "../projects/Pacman/start.png";
+import p2 from "../projects/Pacman/game.png";
+import p3 from "../projects/Pacman/gameOver.png";
+import p4 from "../projects/Pacman/gameWon.png";
+
 const work = [
   {
     id: 1,
@@ -192,6 +225,63 @@ const work = [
       },
     ],
     images: [td1, td2, td3, td4, td5],
+  },
+  {
+    id: 6,
+    title: "Fashionable E-Commerce Website",
+    technologiesUsed: "HTML, CSS, Javascript, PHP and MySQL.",
+    status: "Finished",
+    links: [
+      {
+        name: "github",
+        links: ["https://github.com/Fjolla2002/FashionableEcommerce"],
+      },
+    ],
+    images: [fe1, fe2, fe3, fe4, fe5, fe6, fe7, fe8, fe9],
+  },
+  {
+    id: 7,
+    title: "Distributed Hospital Management System",
+    technologiesUsed: ".NET.",
+    status: "Finished",
+    links: [
+      {
+        name: "github",
+        links: ["https://github.com/Fjolla2002/HospitalManagementSystem"],
+      },
+    ],
+    images: [
+      hms1,
+      hms2,
+      hms3,
+      hms4,
+      hms5,
+      hms6,
+      hms7,
+      hms8,
+      hms9,
+      hms10,
+      hms11,
+      hms12,
+      hms13,
+      hms14,
+      hms15,
+      hms16,
+      hms17,
+    ],
+  },
+  {
+    id: 8,
+    title: "Pacman Game",
+    technologiesUsed: "JAVA",
+    status: "Finished",
+    links: [
+      {
+        name: "github",
+        links: ["https://github.com/Fjolla2002/Pacman-Game"],
+      },
+    ],
+    images: [p1, p2, p3, p4],
   },
 ];
 
