@@ -24,7 +24,7 @@ const statusLabel = (status: string) => {
     v-if="workItem"
     class="py-20 flex flex-col items-start justify-start w-full"
   >
-    <h3 class="px-20 text-3xl text-baseWhite font-extrabold">
+    <h3 class="px-20 text-5xl text-baseWhite font-extrabold">
       {{ workItem.title }}
     </h3>
     <p class="px-20 text-base text-lightGray mt-10">
