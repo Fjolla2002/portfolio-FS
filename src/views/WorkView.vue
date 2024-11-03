@@ -1,9 +1,20 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import work from "../assets/data/work";
+
+const router = useRouter();
+
+const navToDetailPage = (pageTitle: string) => {
+  const title = pageTitle.replace(/ /g, "_");
+  router.push({ name: "work-detail", params: { title } });
+};
 </script>
 
 <template>
-  <div class="p-20 flex flex-col items-start justify-start w-full">
+  <div
+    v-if="$route.name !== 'work-detail'"
+    class="p-20 flex flex-col items-start justify-start w-full"
+  >
     <h2 class="text-8xl text-baseWhite font-extrabold">Work</h2>
     <div class="w-[83%] ml-auto grid grid-cols-2 gap-10 mt-20">
       <div
@@ -14,10 +25,14 @@ import work from "../assets/data/work";
       >
         <h5
           class="text-xl text-baseWhite font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-baseWhite after:transition-width after:duration-300 after:ease-in-out after:w-0 group-hover:after:w-full"
+          @click="navToDetailPage(item.title)"
         >
           {{ item.title }}
         </h5>
-        <div class="mt-7 w-full h-[300px] overflow-hidden">
+        <div
+          class="mt-7 w-full h-[300px] overflow-hidden"
+          @click="navToDetailPage(item.title)"
+        >
           <div
             class="w-full h-full bg-cover bg-no-repeat scale-110 transition-transform duration-300 hover:scale-100"
             :style="{ backgroundImage: `url(${item.images[0]})` }"
@@ -26,4 +41,5 @@ import work from "../assets/data/work";
       </div>
     </div>
   </div>
+  <router-view></router-view>
 </template>

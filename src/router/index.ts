@@ -5,6 +5,7 @@ import WorkView from "../views/WorkView.vue";
 import ExperienceView from "../views/ExperienceView.vue";
 import EducationView from "../views/EducationView.vue";
 import ContactView from "../views/ContactView.vue";
+import WorkDetailView from "../views/WorkDetailView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,13 @@ const router = createRouter({
       path: "/work",
       name: "work",
       component: WorkView,
+      children: [
+        {
+          path: ":title",
+          name: "work-detail",
+          component: WorkDetailView,
+        },
+      ],
     },
     {
       path: "/experience",
