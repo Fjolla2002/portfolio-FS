@@ -5,8 +5,13 @@ import work from "../assets/data/work";
 <template>
   <div class="p-20 flex flex-col items-start justify-start w-full">
     <h2 class="text-8xl text-baseWhite font-extrabold">Work</h2>
-    <div class="w-[83%] ml-auto grid grid-cols-2 gap-8 mt-20">
-      <div v-for="item in work" class="group">
+    <div class="w-[83%] ml-auto grid grid-cols-2 gap-10 mt-20">
+      <div
+        v-for="(item, index) in work"
+        :key="index"
+        :class="{ '-mt-28': (index + 1) % 2 === 0 }"
+        class="group"
+      >
         <h5
           class="text-xl text-baseWhite font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-baseWhite after:transition-width after:duration-300 after:ease-in-out after:w-0 group-hover:after:w-full"
         >
