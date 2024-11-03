@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import work from "../assets/data/work";
+import ImageSlider from "../components/ImageSlider.vue";
 
 const route = useRoute();
 const workTitle = route.params.title as string;
@@ -21,13 +22,17 @@ const statusLabel = (status: string) => {
 <template>
   <div
     v-if="workItem"
-    class="p-20 flex flex-col items-start justify-start w-full"
+    class="py-20 flex flex-col items-start justify-start w-full"
   >
-    <h3 class="text-3xl text-baseWhite font-extrabold">{{ workItem.title }}</h3>
-    <p class="text-base text-lightGray mt-10">
+    <h3 class="px-20 text-3xl text-baseWhite font-extrabold">
+      {{ workItem.title }}
+    </h3>
+    <p class="px-20 text-base text-lightGray mt-10">
       <span>{{ statusLabel(workItem.status) }}</span>
       with
       {{ workItem.technologiesUsed }}
     </p>
+
+    <ImageSlider :images="workItem.images" />
   </div>
 </template>
