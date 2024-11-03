@@ -33,6 +33,8 @@ const statusLabel = (status: string) => {
       {{ workItem.technologiesUsed }}
     </p>
 
-    <ImageSlider :images="workItem.images" />
+    <div class="w-full mt-10">
+      <ImageSlider :images="workItem.images" />
+    </div>
   </div>
 </template>
