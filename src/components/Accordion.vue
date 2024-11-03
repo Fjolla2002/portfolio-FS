@@ -2,7 +2,7 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/vue/24/solid";
 import { Experience } from "../entities/Experience";
 
-const props = defineProps<{
+defineProps<{
   isOpen: boolean;
   data: Experience;
 }>();
@@ -13,7 +13,7 @@ const toggleAccordion = () => {
   emit("toggle");
 };
 
-const formatDate = (dateStr: string | null) => {
+const formatDate = (dateStr: string | null | undefined) => {
   if (!dateStr) return "present";
   const date = new Date(dateStr.split("/").reverse().join("-"));
   return new Intl.DateTimeFormat("en-US", {

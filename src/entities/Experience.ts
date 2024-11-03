@@ -7,6 +7,6 @@ export interface Experience {
   startDate: string;
   endDate?: string;
   location: string;
-  decription?: string;
+  description?: string;
   projects?: ExperienceProject[];
 }
