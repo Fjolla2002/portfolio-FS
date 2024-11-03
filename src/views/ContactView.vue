@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import emailjs from "@emailjs/browser";
 
 const formInputs = ref({
   fullName: "",
@@ -10,6 +11,8 @@ const formInputs = ref({
 const fullNameFocused = ref(false);
 const emailFocused = ref(false);
 const messageFocused = ref(false);
+const isSubmitting = ref(false);
+const submissionMessage = ref("");
 
 const handleInputChange = (
   field: keyof typeof formInputs.value,
@@ -17,6 +20,70 @@ const handleInputChange = (
 ) => {
   const target = event.target as HTMLInputElement;
   formInputs.value[field] = target.value;
+};
+
+// const submitForm = (e: Event) => {
+//   e.preventDefault();
+
+//   emailjs
+//     .sendForm(
+//       "service_c4115w6",
+//       "template_i49917j",
+//       formInputs.value.,
+//       "4ZMf9g_yhpgBtCDQ2"
+//     )
+//     .then(
+//       (result) => {
+//         console.log(result.text);
+//         setSuccessfullySend(data[lang].contactPage.form.successText);
+//         setShowSuccessMessage(true);
+//         setTimeout(() => {
+//           setShowSuccessMessage(false);
+//         }, 10000);
+//         resetForm();
+//       },
+//       (error) => {
+//         console.log(error.text);
+//       }
+//     );
+// };
+
+const handleFormSubmit = async () => {
+  if (
+    !formInputs.value.fullName ||
+    !formInputs.value.email ||
+    !formInputs.value.message
+  ) {
+    submissionMessage.value = "Please fill in all fields.";
+    return;
+  }
+
+  isSubmitting.value = true;
+  submissionMessage.value = "Sending...";
+
+  try {
+    const templateParams = {
+      from_fullName: formInputs.value.fullName,
+      from_email: formInputs.value.email,
+      message: formInputs.value.message,
+    };
+    console.log(templateParams);
+
+    await emailjs.send(
+      "service_c4115w6",
+      "template_040dosi",
+      templateParams,
+      "4ZMf9g_yhpgBtCDQ2"
+    );
+
+    submissionMessage.value = "Message sent successfully!";
+    formInputs.value = { fullName: "", email: "", message: "" };
+  } catch (error) {
+    submissionMessage.value = "Failed to send message. Please try again.";
+    console.error("EmailJS Error:", error);
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 </script>
 
@@ -40,7 +107,7 @@ const handleInputChange = (
             :class="{
               'top-1/2 transform -translate-y-1/2 ':
                 !fullNameFocused && formInputs.fullName === '',
-              '-top-3.5 scale-90 bg-darkerGray rounded':
+              '-top-5 scale-90 bg-darkerGray rounded':
                 fullNameFocused || formInputs.fullName !== '',
             }"
           >
@@ -90,10 +157,16 @@ const handleInputChange = (
         </div>
         <div class="mt-10">
           <button
+            @click="handleFormSubmit"
+            type="submit"
+            :disabled="isSubmitting"
             class="cursor-none px-10 py-3 bg-darkerGray rounded-md text-baseWhite hover:bg-gradient transfro transition-all duration-300 ease-in-out"
           >
-            Submit
+            {{ isSubmitting ? "Sending..." : "Submit" }}
           </button>
+          <p v-if="submissionMessage" class="mt-4 text-lightGray">
+            {{ submissionMessage }}
+          </p>
         </div>
       </div>
     </div>
