@@ -7,7 +7,6 @@
 
 * {
   font-family: "Montserrat", sans-serif;
-  cursor: none;
 }
 
 body,
@@ -16,4 +15,10 @@ html {
   padding: 0;
   overflow: hidden;
   background-color: #1a1a1a;
+}
+
+@media (min-width: 1024px) {
+  * {
+    cursor: none;
+  }
 }

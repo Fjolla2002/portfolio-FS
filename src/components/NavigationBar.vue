@@ -2,6 +2,10 @@
 import { ref } from "vue";
 import { XMarkIcon } from "@heroicons/vue/24/solid";
 
+defineProps<{
+  isDesktop: boolean;
+}>();
+
 const isSidebarOpen = ref<boolean>(false);
 
 const openSidebar = () => {
@@ -14,8 +18,20 @@ const closeSidebar = () => {
 </script>
 
 <template>
-  <div class="h-screen flex bg-bgDarker">
-    <div class="flex flex-col items-start justify-between h-full p-8">
+  <div
+    class="flex bg-bgDarker"
+    :class="{
+      'h-screen': isDesktop || (!isDesktop && isSidebarOpen),
+      '': !isDesktop && !isSidebarOpen,
+    }"
+  >
+    <div
+      class="flex items-start justify-between h-full p-8 w-full"
+      :class="{
+        'flex-col': isDesktop || (!isDesktop && isSidebarOpen),
+        'flex-row': !isDesktop && !isSidebarOpen,
+      }"
+    >
       <div class="flex flex-col items-start justify-start">
         <RouterLink to="/" @click="closeSidebar">
           <h1 class="text-3xl tracking-wider uppercase whitespace-nowrap">
@@ -36,7 +52,10 @@ const closeSidebar = () => {
           Software Developer</span
         >
       </div>
-      <div class="flex items-start justify-center w-full">
+      <div
+        class="flex items-start w-full"
+        :class="isDesktop ? 'justify-center' : 'justify-end'"
+      >
         <div
           v-if="!isSidebarOpen"
           class="group flex flex-col items-start justify-start gap-1 py-2"
@@ -53,10 +72,7 @@ const closeSidebar = () => {
           ></span>
         </div>
 
-        <div
-          v-else
-          class="min-w-[350px] flex items-center justify-between w-full"
-        >
+        <div v-else class="flex items-center justify-between w-full">
           <ul
             class="flex flex-col items-start justify-center gap-3 text-baseWhite text-xl"
           >
@@ -161,7 +177,7 @@ const closeSidebar = () => {
         </div>
       </div>
     </div>
-    <div class="h-full w-1 bg-gradient"></div>
+    <div v-if="isDesktop" class="h-full w-1 bg-gradient"></div>
   </div>
 </template>
 
