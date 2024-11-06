@@ -74,7 +74,7 @@ const closeSidebar = () => {
 
         <div
           v-else
-          class="min-w-[320px] flex items-center justify-between w-full"
+          class="lg:min-w-[320px] flex items-center justify-between w-full"
         >
           <ul
             class="flex flex-col items-start justify-center gap-3 text-baseWhite text-xl"
