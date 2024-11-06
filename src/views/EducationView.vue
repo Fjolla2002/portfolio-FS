@@ -4,11 +4,13 @@ import Certificate from "../assets/pdfs/Certificate.pdf";
 </script>
 
 <template>
-  <div class="p-20 flex flex-col items-start justify-start">
-    <h2 class="text-8xl text-baseWhite font-extrabold">Education</h2>
-    <div class="w-full grid grid-cols-2 gap-10 pt-20">
+  <div class="lg:p-20 py-10 px-5 flex flex-col items-start justify-start">
+    <h2 class="lg:text-8xl text-5xl text-baseWhite font-extrabold">
+      Education
+    </h2>
+    <div class="w-full grid lg:grid-cols-2 grid-cols-1 gap-10 pt-10">
       <div
-        class="flex flex-col items-start justify-start text-lightGray p-5 h-full"
+        class="flex flex-col items-start justify-start text-lightGray lg:p-5 p-0 h-full"
       >
         <h4 class="text-2xl font-semibold">University Degrees</h4>
         <ul class="mt-5 w-full h-full flex-1">

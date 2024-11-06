@@ -88,10 +88,12 @@ const handleFormSubmit = async () => {
 </script>
 
 <template>
-  <div class="p-20 flex flex-col items-start justify-start w-full">
-    <h2 class="text-8xl text-baseWhite font-extrabold">Contact</h2>
+  <div
+    class="lg:p-20 py-10 px-5 flex flex-col items-start justify-start w-full"
+  >
+    <h2 class="lg:text-8xl text-5xl text-baseWhite font-extrabold">Contact</h2>
     <div class="w-full mt-20">
-      <div class="w-[50%] flex flex-col items-center justify-center">
+      <div class="lg:w-[50%] w-full flex flex-col items-center justify-center">
         <div class="relative w-full h-full">
           <input
             v-model="formInputs.fullName"
