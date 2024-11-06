@@ -22,12 +22,12 @@ const statusLabel = (status: string) => {
 <template>
   <div
     v-if="workItem"
-    class="py-20 flex flex-col items-start justify-start w-full"
+    class="lg:p-20 py-10 px-5 flex flex-col items-start justify-start w-full"
   >
-    <h3 class="px-20 text-5xl text-baseWhite font-extrabold">
+    <h3 class="lg:px-20 text-5xl text-baseWhite font-extrabold">
       {{ workItem.title }}
     </h3>
-    <p class="px-20 text-base text-lightGray mt-10">
+    <p class="lg:px-20 text-base text-lightGray mt-10">
       <span>{{ statusLabel(workItem.status) }}</span>
       with
       {{ workItem.technologiesUsed }}

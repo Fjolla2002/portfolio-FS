@@ -30,8 +30,20 @@ onUnmounted(() => {
       class="flex w-full min-h-screen relative z-10"
       :class="isDesktop ? 'flex-row' : 'flex-col'"
     >
-      <NavigationBar :isDesktop="isDesktop" />
-      <div class="h-screen overflow-y-auto w-full">
+      <NavigationBar
+        :isDesktop="isDesktop"
+        :class="{
+          'absolute top-0 left-0 w-full z-20': !isDesktop,
+          relative: isDesktop,
+        }"
+      />
+      <div
+        class="h-screen overflow-y-auto w-full"
+        :class="{
+          '': isDesktop,
+          'pt-20 pb-10': !isDesktop,
+        }"
+      >
         <RouterView />
       </div>
     </div>

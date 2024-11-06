@@ -25,7 +25,7 @@ const formatDate = (dateStr: string | null | undefined) => {
 
 <template>
   <div class="bg-darkerGray w-full p-4 rounded-lg mb-5 text-baseWhite">
-    <div class="flex items-start justify-between">
+    <div class="flex items-start justify-between" @click="toggleAccordion">
       <div class="flex flex-col items-start justify-start">
         <h4 class="font-extrabold text-lg">{{ data.company }}</h4>
         <span class="py-1">{{ data.position }}</span>
@@ -37,7 +37,7 @@ const formatDate = (dateStr: string | null | undefined) => {
           </span>
           <span class="flex w-full justify-end py-1">{{ data.location }}</span>
         </div>
-        <span @click="toggleAccordion">
+        <span>
           <ChevronDownIcon class="h-6 w-6" v-if="!isOpen" />
           <ChevronUpIcon class="h-6 w-6" v-if="isOpen" />
         </span>

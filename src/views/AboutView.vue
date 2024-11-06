@@ -1,6 +1,6 @@
 <template>
-  <div class="p-20 flex flex-col items-start justify-start">
-    <h2 class="text-8xl text-baseWhite font-extrabold">About</h2>
+  <div class="lg:p-20 py-10 px-5 flex flex-col items-start justify-start">
+    <h2 class="lg:text-8xl text-5xl text-baseWhite font-extrabold">About</h2>
     <p class="py-10 max-w-[800px] text-lightGray text-left">
       As an enthusiastic Software Developer, I have a strong foundation in both
       back-end and front-end development. I focus on creating efficient and
@@ -14,7 +14,9 @@
       explore new technologies and best practices to refine my skills and
       contribute effectively to development teams.
     </p>
-    <div class="flex items-center justify-start gap-10">
+    <div
+      class="flex lg:flex-row flex-col lg:items-center items-start justify-start gap-10"
+    >
       <div
         class="bg-darkerGray p-4 rounded-lg flex flex-col items-start justify-between gap-2 text-lightGray text-2xl"
       >

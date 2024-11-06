@@ -19,7 +19,7 @@ const closeSidebar = () => {
 
 <template>
   <div
-    class="flex bg-bgDarker"
+    class="flex lg:bg-bgDarker bg-[#000]"
     :class="{
       'h-screen': isDesktop || (!isDesktop && isSidebarOpen),
       '': !isDesktop && !isSidebarOpen,

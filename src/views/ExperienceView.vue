@@ -11,8 +11,12 @@ const toggleAccordion = (index: number) => {
 </script>
 
 <template>
-  <div class="p-20 flex flex-col items-start justify-start w-full">
-    <h2 class="text-8xl text-baseWhite font-extrabold">Experience</h2>
+  <div
+    class="lg:p-20 py-10 px-5 flex flex-col items-start justify-start w-full"
+  >
+    <h2 class="lg:text-8xl text-5xl text-baseWhite font-extrabold">
+      Experience
+    </h2>
     <div class="pt-10 w-full">
       <Accordion
         v-for="(ex, index) in experience"

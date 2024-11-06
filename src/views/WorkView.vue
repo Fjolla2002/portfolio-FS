@@ -13,14 +13,16 @@ const navToDetailPage = (pageTitle: string) => {
 <template>
   <div
     v-if="$route.name !== 'work-detail'"
-    class="p-20 flex flex-col items-start justify-start w-full"
+    class="lg:p-20 py-10 px-5 flex flex-col items-start justify-start w-full"
   >
-    <h2 class="text-8xl text-baseWhite font-extrabold">Work</h2>
-    <div class="w-[83%] ml-auto grid grid-cols-2 gap-10 mt-20">
+    <h2 class="lg:text-8xl text-5xl text-baseWhite font-extrabold">Work</h2>
+    <div
+      class="lg:w-[83%] w-full ml-auto grid lg:grid-cols-2 grid-cols-1 gap-10 mt-20"
+    >
       <div
         v-for="(item, index) in work"
         :key="index"
-        :class="{ '-mt-28': (index + 1) % 2 === 0 }"
+        :class="{ 'lg:-mt-28 mt-0': (index + 1) % 2 === 0 }"
         class="group"
       >
         <h5
